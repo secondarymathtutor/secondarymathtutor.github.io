@@ -1,1 +1,263 @@
-Hello world
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.80.0">
+    <title>Math Pie@SG</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='node_modules/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='node_modules/@fortawesome/fontawesome-free/css/all.css')}}">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/site.css')}}" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Math Pie@SG</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Subjects
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Elementary Math</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Additional Math</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Tuition Type
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Private Math Tuition</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Blended Math Tuition</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Small Group Math Class</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- <div class="container"> -->
+        <div class="row row-header">
+            <div class="col-12 col-md-5 offset-md-1 align-self-center justify-content-center"
+                style="padding-bottom: 20px;">
+                <h2 class="header-md-center">Maximizing Your Potential</h2>
+                <br />
+                <p class="header-md-center">We are result-driven. Our ethos is to ensure all of our students
+                    are
+                    aiming to improve their grades.</p>
+                <div class="d-flex" id="header-btn">
+                    <button type="button" class="btn btn-important">Free Trial Class</button>
+                </div>
+            </div>
+            <div class="col-md-6 me-0 pe-0">
+                <img src="{{ url_for('static', filename='img/graduation_1.svg')}}" class="img-fluid">
+            </div>
+        </div>
+        <!-- </div> -->
+
+        <!-- <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-md-5 offset-md-1 align-self-center justify-content-center"
+                    style="padding-bottom: 20px;">
+                    <h2 class="header-md-center">Maximizing Your Potential</h2>
+                    <br />
+                    <p class="header-md-center">We are result-driven. Our ethos is to ensure all of our students
+                        are
+                        aiming to improve their grades.</p>
+                    <div class="d-flex" id="header-btn">
+                        <button type="button" class="btn btn-important">Free Trial Class</button>
+                    </div>
+                </div>
+                <div class="col-md-6 me-0 pe-0">
+                    <img src="{{ url_for('static', filename='img/graduation_1.svg')}}" class="img-fluid">
+                </div>
+            </div>
+        </div> -->
+
+
+        <!-- Marketing messaging and featurettes
+  ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row tuition-type">
+                <div class="col-lg-4">
+                    <img src="{{ url_for('static', filename='img/private-tuition.svg')}}">
+                    <h2>Private Online Tuition</h2>
+                    <span class="badge bg-secondary"><i class="fas fa-heart"></i> Parents' Choice <i
+                            class="fas fa-heart"></i></span>
+                    <p>With our highly qualified private tutors tailoring each lesson for individual students, instant
+                        improvement can be observed.</p>
+                    <div class="col-12">
+                        <a class="btn btn-theme" href="#">Learn More &raquo;</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <img src="{{ url_for('static', filename='img/blended-tuition.svg')}}">
+                    <h2>Blended Online Tuition</h2>
+                    <span class="badge bg-theme-ctr"><i class="fas fa-thumbs-up"></i> Recommended!</span>
+                    <p>One of the most effective and cost-saving option. Our robust blended program guarantees
+                        improvement.</p>
+                    <div class="col-12">
+                        <a class="btn btn-theme" href="#">Learn More &raquo;</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <img src="{{ url_for('static', filename='img/small-group-tuition.svg')}}">
+                    <h2>Small Group Tuition</h2>
+                    <span class="badge bg-secondary"><i class="fas fa-dollar-sign"></i> Value for Money <i
+                            class="fas fa-dollar-sign"></i></span>
+                    <p>With class size of less than 5, students improve their math skills in a fun and interactive way.
+                    </p>
+                    <div class="col-12">
+                        <a class="btn btn-theme" href="#">Learn More &raquo;</a>
+                    </div>
+                </div>
+            </div>
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 align-self-center">
+                    <h2 class="featurette-heading">Private Online Math Tuition<br /><span class="text-muted">Every lesson is
+                            tailored</span></h2>
+                    <p class="lead">Students get their math skills assessed by our tutors prior to the commencement of
+                        1-on-1 tuition. Thereafter, every lesson will be tailored and each student's progress will be
+                        closely monitored.</p>
+                </div>
+                <div class="col-md-5 align-self-center">
+                    <img src="{{ url_for('static', filename='img/online_private_class.svg')}}" alt="private-tuition">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2 align-self-center">
+                    <h2 class="featurette-heading">Blended Online Math Tuition<br /><span class="text-muted">Re-defining
+                            Tuition</span></h2>
+                    <p class="lead">Our blended tuition finds a balance between private tuition and group tuition. With
+                        stunningly cheaper rates, students get to attend a small group class where they learn about math
+                        concepts, problem-solving techniques and tips, followed by a 1-on-1 tailored private session in
+                        which the knowledge gets reinforced.</p>
+                </div>
+                <div class="col-md-5 order-md-1 align-self-center">
+                    <img src="{{ url_for('static', filename='img/online_blended_class.svg')}}">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 align-self-center">
+                    <h2 class="featurette-heading">Small Group Online Class<br /><span class="text-muted">Cheaper Rates, Better
+                            Results</span></h2>
+                    <p class="lead">Who says group tuition is not as effective as private tuition? With no more than 5
+                        students per session, students learn about math concepts, problem-solving techniques, and tips
+                        in our small group class. Plus, they get their questions answered just like they would in
+                        private 1-on-1 tuitions.</p>
+                </div>
+                <div class="col-md-5 align-self-center">
+                    <img src="{{ url_for('static', filename='img/online_group_class.svg')}}">
+                    </svg>
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <!-- /END THE FEATURETTES -->
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer class="container">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+    </main>
+
+
+    <script src="{{ url_for('static', filename='node_modules/jquery/dist/jquery.slim.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='node_modules/@popperjs/core/dist/umd/popper.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+    <script>
+        $(window).on('resize', function () {
+            var win = $(this);
+            if (win.width() >= 768) {
+                $('#header-btn').removeClass('justify-content-center');
+                $('#header-btn').addClass('justify-content-left');
+
+            } else {
+                $('#header-btn').removeClass('justify-content-left');
+                $('#header-btn').addClass('justify-content-center');
+            }
+            console.log("resizing success")
+        });
+    </script>
+
+</body>
+
+</html>
